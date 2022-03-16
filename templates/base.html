@@ -6,65 +6,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- BOOTSTRAP CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <!-- Customized CSS -->
     <link rel="stylesheet" type="text/css" href="{% static 'styles/style.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="icon" href="{% static 'logo.png' %}">
     <title>Craigslist Web Scraper</title>
 </head>
 
 <body>
-    <nav>
-        <div class="container nav-wrapper">
-            <a href="#" class="brand-logo"><img src="{% static 'logo.png' %}" height="65"></a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="sass.html">Sass</a></li>
-                <li><a href="badges.html">Components</a></li>
-                <li><a href="collapsible.html">JavaScript</a></li>
+    <!-- The navigation bar -->
+    <nav class="navbar navbar-expand-lg bg-dark text-center text-white">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="{% static 'logo.png' %}" height="34" class="d-inline-block align-top" alt="Craigslist Logo">
+                Craiglist Web Scraper
+            </a>
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'new_search' %}">Search</a>
+                </li>
             </ul>
         </div>
     </nav>
-    <div class="container">
-        <h1 style="text-align: center;">What do you want to Search?</h1>
-        <div class="row">
-            <div class="col s4">
-                <div class="center">
-                    <i class="large material-icons" style="color: #EE6E73;">flash_on</i>
-                    <p>Fast Craiglist Scraper</p>
-                    <p class="light center">Scrape away right here with a beautiful GUI</p>
-                </div>
-            </div>
-            <div class="col s4">
-                <div class="center">
-                    <i class="large material-icons" style="color: orangered;">camera</i>
-                    <p>Filter your searches</p>
-                    <p class="light center">We built in functionality to filter based on prices</p>
-                </div>
-            </div>
-            <div class="col s4">
-                <div class="center">
-                    <i class="large material-icons" style="color: blue;">chrome_reader_mode</i>
-                    <p>A better look to your searches</p>
-                    <p class="light center">We built this passion</p>
-                </div>
-            </div>
+    {% block content %}
+    {% endblock content %}
+    <footer class="bg-dark text-center bottom text-white">
+        <div class="social-container container">
+            <!-- Social media -->
+            <section>
+                <a class="social-btn btn btn-outline-light btn-floating" href="https://www.facebook.com/ahsanx96/" role="button"><i class="bi bi-facebook"></i></a>
+                <a class="social-btn btn btn-outline-light btn-floating" href="https://www.instagram.com/navid_alvi_/" role="button"><i class="bi bi-instagram"></i></a>
+                <a class="social-btn btn btn-outline-light btn-floating" href="https://www.linkedin.com/in/navid-alvi-ahsan-025aaa208/" role="button"><i class="bi bi-linkedin"></i></a>
+                <a class="social-btn btn btn-outline-light btn-floating" href="https://github.com/navid001" role="button"><i class="bi bi-github"></i></a>
+            </section>
         </div>
-        <!-- <h2>New Search</h2> -->
-        <form action="{% url 'new_search' %}" method="POST">
-            {% csrf_token %}
-            <div class="progress">
-                <div class="indeterminate">hello</div>
-            </div>
-            <label for="search">Enter your search item</label>
-            <input type="text" name="search" placeholder="Search">
-            <button class="btn waves-effect waves-light" type="submit" name="submit">Submit
-                <i class="material-icons right">search</i>
-            </button>
-        </form>
-        {% block content %}
-        {% endblock content %}
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <div class="text-center p-2" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2022 Copyright:
+            <strong><em>Navid Alvi</em></strong>
+        </div>
+    </footer>
+    <!-- BOOTSTRAP JAVASCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 
 </html>

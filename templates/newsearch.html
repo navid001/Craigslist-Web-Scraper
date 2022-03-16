@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="container">
+    <form action="{% url 'search' %}" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="searchbox" class="searchlabel1">Enter the Item to be Searched</label>
+            <input type="text" class="form-control searchbox1" id="searchbox" placeholder="Search Item" required>
+        </div>
+        <button type="submit" class="btn btn-primary submit1">Submit</button>
+    </form>
+</div>
+{% endblock content %}

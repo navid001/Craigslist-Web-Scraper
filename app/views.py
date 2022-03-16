@@ -4,14 +4,17 @@ import requests
 
 # Create your views here.
 def home(request):
-    return render(request,'base.html')
+    return render(request,'index.html')
 
 def new_search(request):
-    url='https://newyork.craigslist.org/search/bbb?query='
+    return render(request,'newsearch.html')
+
+def search(request):
+    # url='https://newyork.craigslist.org/search/bbb?query='
     search=request.POST.get('search')
-    final_url=url+search
-    print(final_url)
+    # final_url=url+search
+    # print(final_url)
     search_parameters = {
         'search':search,
     }
-    return render(request,'new_search.html',search_parameters)
+    return render(request,'search.html',search_parameters)

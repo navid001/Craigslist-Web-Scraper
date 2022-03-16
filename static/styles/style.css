@@ -1,0 +1,88 @@
+body {
+    background: whitesmoke;
+}
+
+nav {
+    padding: 5px;
+}
+
+.navbar-brand {
+    color: whitesmoke;
+}
+
+.nav-link {
+    color: whitesmoke;
+}
+
+.start-button {
+    margin: 25px;
+}
+
+.social-container {
+    padding: 10px;
+    margin: 0.5;
+}
+
+.social-btn {
+    margin: 0 10px;
+}
+
+footer {
+    margin-top: 33px;
+}
+
+.front-intro {
+    margin: 20px 20px 30px 20px;
+}
+
+.features {
+    font-size: larger;
+    margin: 20px 10px;
+}
+
+.feature-icon {
+    margin: 10px;
+}
+
+.form-control {
+    width: 0;
+}
+
+.searchlabel1 {
+    margin: 132px 140px 10px 140px;
+    font-size: 1.7em;
+}
+
+.searchbox1 {
+    margin: 15px 140px 15px 140px;
+    font-size: 1.2em;
+    width: 55%;
+}
+
+.submit1 {
+    margin: 10px 140px 130px 140px;
+    font-size: 1.2em;
+    padding: 5px 30px;
+    max-width: 400px;
+}
+
+.searchlabel2 {
+    margin: 30px 140px 10px 60px;
+    font-size: 1.2em;
+}
+
+.searchbox2 {
+    margin: 10px 140px 15px 60px;
+    width: 55%;
+}
+
+.submit2 {
+    margin: 10px 140px 130px 60px;
+    padding: 5px 30px;
+    max-width: 400px;
+}
+
+.card {
+    padding: 10px;
+    margin: 10px;
+}

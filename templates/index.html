@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="container">
+    <h1 class="front-intro" style="text-align: center;">Craigslist Scraper</h1>
+    <h3 class="front-intro" style="text-align: center;">
+        Introducing A New way to Web Scraping
+    </h3>
+    <div class="row">
+        <div class="col-lg-3 col-sm-12 col-md-6 text-center">
+            <i class="bi bi-check-circle-fill feature-icon" style="font-size: 3rem; color: rgba(0, 0, 0, 0.7);"></i>
+            <p class="features">An Easier and Simpler Approach to Scraping your websites</p>
+        </div>
+        <div class="col-lg-3 col-sm-12 col-md-6 text-center">
+            <i class="bi bi-lightning-fill feature-icon" style="font-size: 3rem; color: rgba(0, 0, 0, 0.7);"></i>
+            <p class="features">A Faster and Efficient Method to Scraping your desired results</p>
+        </div>
+        <div class="col-lg-3 col-sm-12 col-md-6 text-center">
+            <i class="bi bi-funnel-fill" feature-icon style="font-size: 3rem; color: rgba(0, 0, 0, 0.7);"></i>
+            <p class="features">An added Method to Filter your searches according to your needs</p>
+        </div>
+        <div class="col-lg-3 col-sm-12 col-md-6 text-center">
+            <i class="bi bi-bootstrap-fill feature-icon" style="font-size: 3rem; color: rgba(0, 0, 0, 0.7);"></i>
+            <p class="features">An User Friendly UI made using BOOTSTRAP</p>
+        </div>
+    </div>
+    <div class="text-center start-button">
+        <a type="button" class="btn btn-primary btn-lg" href="{% url 'new_search' %}">
+            <span class="align-middle">Start SCRAPING</span>
+            <i class="bi bi-forward-fill border-0"></i>
+        </a>
+    </div>
+</div>
+{% endblock content %}
