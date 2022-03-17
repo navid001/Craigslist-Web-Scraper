@@ -83,6 +83,9 @@ footer {
 }
 
 .card {
+    background-color: #ededed;
     padding: 10px;
     margin: 10px;
+    -webkit-box-shadow: 4px 6px 7px 1px #c4c4c4;
+    box-shadow: 4px 6px 7px 1px #c4c4c4;
 }
