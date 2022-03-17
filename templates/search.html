@@ -25,13 +25,16 @@
                     <p>{{result.3}}</p>
                     <p><strong>Posted on:</strong> {{result.4}}</p>
                 </p>
-                <a href="#" class="btn btn-primary">For more details:</a>
+                <a href="{{result.1}}" class="btn btn-primary">For more details:</a>
             </div>
         </div>
         {% endfor %}
     </div>
     {% else %}
-    <div class="empty">PAGE EMPTY</div>
+    <div class="empty">
+        <img src="{% static 'sademoji.png' %}" alt="Sad Emoji">
+        <p>Unfortunately, the product you are looking for cannot be found!</p>
+    </div>
     {% endif %}
 </div>
 {% endblock content %}
