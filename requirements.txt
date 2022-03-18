@@ -4,7 +4,7 @@ beautifulsoup4==4.9.3
 certifi==2020.12.5
 cffi==1.14.5
 chardet==4.0.0
-conda==4.10.1
+conda==4.0.1
 conda-build==3.21.4
 conda-content-trust==0.1.1
 conda-env==2.6.0
